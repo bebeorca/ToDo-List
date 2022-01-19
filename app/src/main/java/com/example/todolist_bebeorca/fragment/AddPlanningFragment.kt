@@ -79,8 +79,4 @@ class AddPlanningFragment : Fragment() {
         return view
     }
 
-//    fun openCalendar(){
-//
-//    }
-
 }
