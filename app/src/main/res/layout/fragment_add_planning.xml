@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#112233"
+    android:orientation="vertical"
+    tools:context=".fragment.AddPlanningFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="20dp"/>
+    
+    <EditText
+        android:id="@+id/planning_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/input_field_style"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="12dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/planning_date"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/input_field_style"
+        android:backgroundTint="@color/white"
+        android:inputType="none"
+        android:paddingLeft="12dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:focusable="false"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/add_task_button"
+        android:layout_width="168dp"
+        android:layout_height="40dp"
+        android:text="Add Task"
+        android:textAllCaps="false"
+        android:background="@drawable/button_style"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
