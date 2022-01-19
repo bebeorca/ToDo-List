@@ -73,9 +73,6 @@ class AddPlanningFragment : Fragment() {
 
         }
 
-
-
-
         return view
     }
 
