@@ -1,8 +1,10 @@
 package com.example.todolist_bebeorca
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setStatusBarColor()
 
         add_planning_framelayout = findViewById(R.id.add_planning_framelayout)
         leftArrow = findViewById(R.id.leftArrow)
@@ -35,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         leftArrow.setOnClickListener {
             onBackPressed()
         }
-
 
     }
 
@@ -60,6 +62,13 @@ class MainActivity : AppCompatActivity() {
             addplanningtxt.visibility = View.GONE
             addplanningimg.visibility = View.GONE
         }
+    }
+
+    private fun setStatusBarColor(){
+        val window = this.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = this.resources.getColor(R.color.main_background)
     }
 
 }
