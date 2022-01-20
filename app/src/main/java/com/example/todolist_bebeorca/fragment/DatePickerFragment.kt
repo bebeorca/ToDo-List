@@ -30,10 +30,10 @@ class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
         val selectedDate = SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH)
             .format(calendar.time)
 
-        val selecteDateBundle = Bundle()
-        selecteDateBundle.putString("SELECTED_DATE", selectedDate)
+        val selectedDateBundle = Bundle()
+        selectedDateBundle.putString("SELECTED_DATE", selectedDate)
 
-        setFragmentResult("REQUEST_KEY", selecteDateBundle)
+        setFragmentResult("REQUEST_KEY", selectedDateBundle)
 
     }
 }
